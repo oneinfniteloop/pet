@@ -1,0 +1,1568 @@
+
+
+Started GET "/" for ::1 at 2016-10-31 21:05:05 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/Cellar/ruby/2.3.1_2/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.1_2/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.1_2/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (132.2ms)
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePets (20161101012623)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "pets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101012623"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2016-10-31 21:05:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#homepage as HTML
+  Rendered welcome/homepage.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1003ms (Views: 992.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/scaffolds.self-7c560cb1da4bd978c6873d2b2b844f89257d03e34d1cbc15337de130b72838cb.css?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/pets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-31 21:05:38 -0700
+
+
+Started GET "/pets/index.html" for ::1 at 2016-10-31 21:06:21 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mPet Load (0.7ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 35ms (ActiveRecord: 1.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=index):
+  app/controllers/pets_controller.rb:67:in `set_pet'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (135.6ms)
+
+
+Started GET "/pets/index" for ::1 at 2016-10-31 21:06:25 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=index):
+  app/controllers/pets_controller.rb:67:in `set_pet'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 21:06:31 -0700
+Processing by WelcomeController#homepage as HTML
+  Rendered welcome/homepage.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:06:52 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (24.9ms)
+  Rendered pets/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:07:06 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Vd25vePjkhHe59r7JiB0f+52+89a4IGcLanXc8dCRw6zqT1nY+yi+ees7BBK9zJvEis2AdsXYUMr5qUbuG3aQ==", "pet"=>{"name"=>"alex", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffc3054ba58 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-20677-61xusm.png>, @original_filename="Screen Shot 2016-10-31 at 8.48.31 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Screen Shot 2016-10-31 at 8.48.31 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered pets/_form.html.erb (8.8ms)
+  Rendered pets/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 358ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:08:33 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YWbGSpZYlX4WzfNDJ2bF0GYMR/TTpEJdgVs2WxSFfCq+/xRZ/FipvbYo35iK1ZjIJf0ww+mjnd79QguStXnCXw==", "pet"=>{"name"=>"alex", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffc368ccaa0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-20677-sigajf.png>, @original_filename="Screen Shot 2016-10-31 at 8.48.31 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Screen Shot 2016-10-31 at 8.48.31 PM.png\"\r\nContent-Type: image/png\r\n">, "remove_image"=>"0"}, "commit"=>"Create Pet"}
+Unpermitted parameter: remove_image
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered pets/_form.html.erb (5.5ms)
+  Rendered pets/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 286ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:08:50 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vMjZQtMF77apURAqeRLzNEQ4p2JOTG+eltyOIpg55EBjUQtRuQXTdQm0PPHUoa4sB8nQVXRLsB3qxbPrOcVaNQ==", "pet"=>{"name"=>"alex", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ffc35c51a78 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-20677-8xk0hs.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">, "remove_image"=>"0"}, "commit"=>"Create Pet"}
+Unpermitted parameter: remove_image
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered pets/_form.html.erb (4.6ms)
+  Rendered pets/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 390ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:11:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.7ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 379ms (Views: 361.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:11:48 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (34.6ms)
+  Rendered pets/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 70ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:11:55 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5pZB8GQxeshVsmVIrLuCaP/sms3RPRturqpa1KxbzUI5D5PjDjFGC/VXSZMBCN9wvB3t+us6xO3Ss2cdDadzNw==", "pet"=>{"name"=>"alex", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fe61e9b3cf8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-20790-1243id5.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (11.2ms)
+  Rendered pets/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 406ms (Views: 58.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:18:16 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.6ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 399ms (Views: 377.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:18:20 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (33.7ms)
+  Rendered pets/new.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 84ms (Views: 74.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:18:25 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iGVWhWVzfRMF0wFRKM9o65ZLk+gI5BdnZ6CsT+pHKrZX/ISWD3NB0KU2LYqFfDXz1brk3zLjyOQbuZGGS7uUww==", "pet"=>{"name"=>"adsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fee95be35d0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21828-w47482.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (13.5ms)
+  Rendered pets/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 390ms (Views: 56.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:19:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 339ms (Views: 325.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:19:27 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (28.1ms)
+  Rendered pets/new.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 70ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:19:33 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVyZ93QcNuDzsaUhvGTyXPJnpp3kSZJqmgNyxv3OzNa6xUvkHhwKI1NUifoR169EsZbRqt5OTenmGk8PXDJyow==", "pet"=>{"name"=>"adfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff89794d990 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21843-1eujm2s.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (15.1ms)
+  Rendered pets/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 387ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:22:44 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:22:46 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (3.3ms)
+  Rendered pets/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:22:47 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AcuMgWRjv4IidV1P97XBZ4z7WRAaFtjHnzghOVl4bhneUl6SDmODQYKQcZRaBpx/zwouJyARB0TjIRzw+ITQbA==", "pet"=>{"name"=>""}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "pets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2016-11-01 04:22:47.170758"], ["updated_at", "2016-11-01 04:22:47.170758"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/1
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/pets/1" for ::1 at 2016-10-31 21:22:47 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:22:48 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:22:49 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (3.1ms)
+  Rendered pets/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:22:55 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:22:56 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.7ms)
+  Rendered pets/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:23:02 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hyq+e8h31bTW04UwLw3ySX44Q1alq90OKi1JQay8CuvAs2xoonfpd3Y2qeuCvq9RPck0YZ+sAo1WNHSIDUC0ng==", "pet"=>{"name"=>"adf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff897d479b0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21843-mj7tmc.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered pets/_form.html.erb (6.0ms)
+  Rendered pets/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 350ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:26:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 363ms (Views: 340.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:26:24 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (32.1ms)
+  Rendered pets/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:26:29 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:26:30 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.3ms)
+  Rendered pets/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:26:34 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tcNEYJtnUkTxpM1XRBVOARtcRXlcH55UuAbzK7wEUFxqWpZz8Wduh1FB4YzpphMZWK0yTmYYQdfEH87iHfjuKQ==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995e9e3118 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-1k8m7fe.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 04:26:34.665567"], ["updated_at", "2016-11-01 04:26:34.665567"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/2
+Completed 302 Found in 24ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/pets/2" for ::1 at 2016-10-31 21:26:34 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pets/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:26:48 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 34ms (Views: 21.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:26:53 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hbysus9twIQxyoo31kGoabD0AyONdtLN6Mh+Mxj4hQJjyChgT2LwbAiBvNy6lu55TKnO7QyBMhLuhwxbZ9cYQ==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995ec0c9a8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-1h37tah.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (9.5ms)
+  Rendered pets/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 70ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:27:45 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hbysus9twIQxyoo31kGoabD0AyONdtLN6Mh+Mxj4hQJjyChgT2LwbAiBvNy6lu55TKnO7QyBMhLuhwxbZ9cYQ==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995e22b2b8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-72wbh.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (5.0ms)
+  Rendered pets/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 340ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:29:55 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.8ms)
+  Rendered pets/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:30:01 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KnysbEctUckJJMoo70MsQ06dRIahO9kr/0ChH6uQ92b15X5/LS1tCqnB5vNC8HFbDWwzsZs8BqiDWZzWCmxJEw==", "pet"=>{"name"=>"dafds", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995e861628 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-hhcjfb.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (4.5ms)
+  Rendered pets/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 354ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:32:02 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QRrIv8J24EXLn/ooPmB3CYp5nI+GfevoAqDrfW3hr6SegxqsqHbchmt61vOT0yoRyYjruLx6NGt+uda0zB0R0Q==", "pet"=>{"name"=>"dafds", "remove_image"=>"0"}, "commit"=>"Create Pet"}
+Unpermitted parameter: remove_image
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "dafds"], ["created_at", "2016-11-01 04:32:02.125846"], ["updated_at", "2016-11-01 04:32:02.125846"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/3
+Completed 302 Found in 19ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/pets/3" for ::1 at 2016-10-31 21:32:02 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered pets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:34:21 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 42ms (Views: 31.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:34:24 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:34:28 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (3.1ms)
+  Rendered pets/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:34:34 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pqt/nRCdFPOAuASqimZXq4jxuAlh7bGQyKTNg7c54ph5Mq2Oep0oMCBdKHEn1QqzywDPPlvqbhO0vfBKFsVc7Q==", "pet"=>{"name"=>"dafdsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995b7b4480 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-grtz1j.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `my_text' for #<ImageUploader::Uploader70148306217860:0x007f995b6a17a0>):
+  app/uploaders/image_uploader.rb:52:in `block in poster'
+  app/uploaders/image_uploader.rb:50:in `poster'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.3ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:34:44 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XQPJ0+CXMxHvGQmBUEAgqKqIH/WOcKK/1uPv7UrJBqWCmhvAipcP0k/8JVr9832w6XlowrR3fTyq+tIk6zW40A==", "pet"=>{"name"=>"dafdsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995ec28f18 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-106drcm.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (4.8ms)
+  Rendered pets/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 324ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:40:50 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:40:53 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.5ms)
+  Rendered pets/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:40:59 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fcWISBdrFJXncySThj9mJUOf3Gd8Tr70yNTk07DC3i+iXFpbfWsoVkeWCEgrjDs9AG6rUEZJYXe0zdkaET5gWg==", "pet"=>{"name"=>"adfas", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995e149098 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-d4kehe.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered pets/_form.html.erb (6.4ms)
+  Rendered pets/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 345ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:43:55 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k15tHBpMvU3MMOxlShZEmzzK3OTvdEUvf+V7ZdFvwbdMx78PcEyBjmzVwL7npRmDfzur09VzmqwD/EascJN/wg==", "pet"=>{"name"=>"adfas", "remove_image"=>"0"}, "commit"=>"Create Pet"}
+Unpermitted parameter: remove_image
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "adfas"], ["created_at", "2016-11-01 04:43:55.614366"], ["updated_at", "2016-11-01 04:43:55.614366"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/4
+Completed 302 Found in 24ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/pets/4" for ::1 at 2016-10-31 21:43:55 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:43:58 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.3ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:44:02 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:45:49 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+N+uDxaCbShSYUg1dGO7Q1zezJw3S4JCrvnVQtNxREYnRnwcfIJR6/KEZO7Z0OZbHy+7qw1MXcHS4OiLco36Mw==", "pet"=>{"name"=>"adsfsd", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995eb808e0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-11rek27.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Alex/Documents/rubywebsite/myapp/app/uploaders/image_uploader.rb:76: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/uploaders/image_uploader.rb:76: syntax error, unexpected keyword_end, expecting end-of-input
+  app/models/pet.rb:3:in `<class:Pet>'
+  app/models/pet.rb:2:in `<top (required)>'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:46:15 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+N+uDxaCbShSYUg1dGO7Q1zezJw3S4JCrvnVQtNxREYnRnwcfIJR6/KEZO7Z0OZbHy+7qw1MXcHS4OiLco36Mw==", "pet"=>{"name"=>"adsfsd", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995edfd8c0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-wmndft.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered pets/_form.html.erb (5.4ms)
+  Rendered pets/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 368ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:46:39 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 37ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:46:42 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (3.3ms)
+  Rendered pets/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:46:47 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PT/q3D/cxqndHTmAnUCYD2Wp5IYjURA+j/s8GpkI7CbipjjPVdz6an34FVsw88UXJliTsRlWz73z4gHTOPRSUw==", "pet"=>{"name"=>"adfdsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995ea1e740 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-ewr0x0.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adfdsf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 04:46:48.269544"], ["updated_at", "2016-11-01 04:46:48.269544"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/5
+Completed 302 Found in 323ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/pets/5" for ::1 at 2016-10-31 21:46:48 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered pets/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 21:46:57 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.3ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 21:46:59 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.5ms)
+  Rendered pets/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 21:47:05 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pdu1v5oebw0kZDtcWBZ5FsZ/9PLrI+BqKMjbhXj1GO/iQmes8B5TzoSBF4f1pSQOhY6DxdEkP+lU0eZM2Qmmmg==", "pet"=>{"name"=>"adfadf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f995e50d350 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-21909-1oikc1c.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adfadf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 04:47:06.153429"], ["updated_at", "2016-11-01 04:47:06.153429"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/6
+Completed 302 Found in 338ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/pets/6" for ::1 at 2016-10-31 21:47:06 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-10-31 22:00:11 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#homepage as HTML
+  Rendered welcome/homepage.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 333ms (Views: 319.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-7c560cb1da4bd978c6873d2b2b844f89257d03e34d1cbc15337de130b72838cb.css?body=1" for ::1 at 2016-10-31 22:00:11 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-31 22:00:11 -0700
+
+
+Started GET "/assets/pets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-10-31 22:00:11 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-10-31 22:00:11 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-10-31 22:00:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-10-31 22:00:12 -0700
+
+
+Started GET "/assets/pets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-31 22:00:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-10-31 22:00:12 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-10-31 22:00:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-10-31 22:00:12 -0700
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:02:50 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (63.2ms)
+  Rendered pets/new.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 163ms (Views: 130.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:02:56 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2oUB7ggSYlUzmQcT8Y3tq02bpZIB1c5C9Xu04fXpl3g88YU0iB1SvQrSMfidWqu7scZoXIAiLp3zNMaJisYKA==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b0f96888 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-10aq2up.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.1ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfa"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:02:57.302761"], ["updated_at", "2016-11-01 05:02:57.302761"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/7
+Completed 302 Found in 635ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/pets/7" for ::1 at 2016-10-31 22:02:57 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered pets/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 50ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/7/edit" for ::1 at 2016-10-31 22:04:54 -0700
+Processing by PetsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered pets/_form.html.erb (30.7ms)
+  Rendered pets/edit.html.erb within layouts/application (32.4ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `thumb' for #<ActionView::Helpers::FormBuilder:0x007f80b41326f8>):
+    23:     <%= f.label :image %><br>
+    24:     <%= f.file_field :image %>
+    25:     <% if f.object.image? %>
+    26:       <%= image_tag f.thumb %>
+    27:       <%= f.label :remove_image %>
+    28:       <%= f.check_box :remove_image %> 
+    29:     <% end %>
+  app/views/pets/_form.html.erb:26:in `block in _app_views_pets__form_html_erb__4399813638627112913_70095348554060'
+  app/views/pets/_form.html.erb:1:in `_app_views_pets__form_html_erb__4399813638627112913_70095348554060'
+  app/views/pets/edit.html.erb:3:in `_app_views_pets_edit_html_erb___1341608369145538947_70095341148900'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:04:58 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2oUB7ggSYlUzmQcT8Y3tq02bpZIB1c5C9Xu04fXpl3g88YU0iB1SvQrSMfidWqu7scZoXIAiLp3zNMaJisYKA==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b3240b18 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1g14sbm.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdfa"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:04:59.019044"], ["updated_at", "2016-11-01 05:04:59.019044"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/8
+Completed 302 Found in 348ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/pets/8" for ::1 at 2016-10-31 22:04:59 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered pets/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pets/8" for ::1 at 2016-10-31 22:05:40 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered pets/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 70ms (Views: 52.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 22:05:41 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:05:43 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.4ms)
+  Rendered pets/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:05:48 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DCg8U2xGwRkmAaO6gmqHKtdVItmdCM7MEMzS7FnSuzfTse5ABkb92obkj2Ev2doylKRV7qcPEU9s1e8l+C4FQg==", "pet"=>{"name"=>"dasfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4066828 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-f98yxy.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 0.2ms)
+
+NameError (undefined local variable or method `this' for #<Pet:0x007f80b4061288>):
+  app/models/pet.rb:10:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:06:07 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eDIdIIrSRXBHMTujXugg18r91N5i5NbbbLqqKkY11i6nq88z4NJ5s+fUF3jzW33PiQyj6VjjCVgQo5fj58loWw==", "pet"=>{"name"=>"dasfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b3744df8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-h6vn0f.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dasfa"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:06:07.408468"], ["updated_at", "2016-11-01 05:06:07.408468"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/9
+Completed 302 Found in 334ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/pets/9" for ::1 at 2016-10-31 22:06:07 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered pets/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/9" for ::1 at 2016-10-31 22:08:55 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered pets/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 22:08:56 -0700
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.3ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:08:59 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.6ms)
+  Rendered pets/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:09:04 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbyJOKu1FVrGgnTrfRieonU487+nEXfK7VPhB3jO4kn6JVsrwbUpmWZnWDDQq8O6NsmEiJ0WqEmRStzO2TJcPA==", "pet"=>{"name"=>"asdfsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ae297e18 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-rng55.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  app/uploaders/image_uploader.rb:51:in `add_text'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (108.7ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:09:37 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbyJOKu1FVrGgnTrfRieonU487+nEXfK7VPhB3jO4kn6JVsrwbUpmWZnWDDQq8O6NsmEiJ0WqEmRStzO2TJcPA==", "pet"=>{"name"=>"asdfsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4113de8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-xusjd7.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `add_text' for ImageUploader:Class):
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.6ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:09:57 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbyJOKu1FVrGgnTrfRieonU487+nEXfK7VPhB3jO4kn6JVsrwbUpmWZnWDDQq8O6NsmEiJ0WqEmRStzO2TJcPA==", "pet"=>{"name"=>"asdfsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4241440 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-xubm.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdfsf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:09:57.994157"], ["updated_at", "2016-11-01 05:09:57.994157"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/10
+Completed 302 Found in 536ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/pets/10" for ::1 at 2016-10-31 22:09:58 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets" for ::1 at 2016-10-31 22:10:16 -0700
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.4ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:10:18 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (5.1ms)
+  Rendered pets/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:10:25 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k4B07r7LwWK/fBqiLftLax4spop97jxy/VgY75/Vy7xMGab91Mv9oR+ZNnmASBZzXd3RvUfp4/GBQSUmPil1yQ==", "pet"=>{"name"=>"asdfsa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b30438b0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-cte9lk.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 413ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `add_text' for nil:NilClass):
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:11:08 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k4B07r7LwWK/fBqiLftLax4spop97jxy/VgY75/Vy7xMGab91Mv9oR+ZNnmASBZzXd3RvUfp4/GBQSUmPil1yQ==", "pet"=>{"name"=>"asdfsa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b40d0f70 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1doj4zj.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfsa"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:11:08.507686"], ["updated_at", "2016-11-01 05:11:08.507686"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/11
+Completed 302 Found in 306ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pets/11" for ::1 at 2016-10-31 22:11:08 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered pets/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:11:46 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.6ms)
+  Rendered pets/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:11:52 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ade712d0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1bj4hec.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `manipulate!' for ImageUploader:Class):
+  app/uploaders/image_uploader.rb:52:in `add_text'
+  app/models/pet.rb:12:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.1ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:13:49 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b400d188 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-21b5vm.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `add_text' for nil:NilClass):
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.1ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:13:55 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4141360 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1cmb8qg.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `add_text' for nil:NilClass):
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.5ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:14:30 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80afd6c090 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-4nk8ro.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `add_text' for nil:NilClass):
+  app/models/pet.rb:12:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.3ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:27:22 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80afc38048 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-16wa7dk.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/Users/Alex/Documents/rubywebsite/myapp/app/models/manipulator.rb:16: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/models/manipulator.rb:16: syntax error, unexpected keyword_end, expecting end-of-input
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:27:52 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ade41698 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-xl6tm6.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 0.8ms)
+
+Magick::ImageMagickError (unable to open image `/uploads/tmp/1477978072-22346-5015/Tesla-Model-3-with-mountain.jpg': No such file or directory @ error/blob.c/OpenBlob/2705):
+  app/models/manipulator.rb:6:in `new'
+  app/models/manipulator.rb:6:in `add_custom_text'
+  app/models/pet.rb:11:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:28:52 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4470b08 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-etp5pf.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 0.6ms)
+
+Magick::ImageMagickError (unable to open image `/uploads/tmp/1477978132-22346-9900/Tesla-Model-3-with-mountain.jpg': No such file or directory @ error/blob.c/OpenBlob/2705):
+  app/models/manipulator.rb:6:in `new'
+  app/models/manipulator.rb:6:in `add_custom_text'
+  app/models/pet.rb:12:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (118.5ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:31:28 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ae358370 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1dgff5f.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+NameError (undefined local variable or method `options' for #<Class:0x007f80b4792048>):
+  app/models/pet.rb:2:in `<class:Pet>'
+  app/models/pet.rb:1:in `<top (required)>'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.5ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:31:38 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b60b4b70 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1f6z2w9.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 1.1ms)
+
+Magick::ImageMagickError (unable to open image `/uploads/tmp/1477978298-22346-6679/Tesla-Model-3-with-mountain.jpg': No such file or directory @ error/blob.c/OpenBlob/2705):
+  app/models/manipulator.rb:6:in `new'
+  app/models/manipulator.rb:6:in `add_custom_text'
+  app/models/pet.rb:12:in `edit_image'
+  app/controllers/pets_controller.rb:30:in `block in create'
+  app/controllers/pets_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.9ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:31:46 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lEe9DbkfrJ3R7H8eULVAxH7XpMdY+zZesYnHK9T43IBL3m8e0x+QXnEJU8X9Bh3cPSbT8GL86d3NkPridQRi9Q==", "pet"=>{"name"=>"asdfa", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ae30d258 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1j2svzr.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "asdfa"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:31:46.374360"], ["updated_at", "2016-11-01 05:31:46.374360"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/12
+Completed 302 Found in 303ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/pets/12" for ::1 at 2016-10-31 22:31:46 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered pets/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/12" for ::1 at 2016-10-31 22:32:25 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered pets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:32:27 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.7ms)
+  Rendered pets/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:32:33 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oexBHFlHpxsSpmKKUyDFEJ6/9GKyEyJwt87Q5Er6qDV+dZMPM0eb2LJDTlH+k5gI3U6DVYgU/fPL1+0t6wYWQA==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80afddd4c0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1e48uad.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `options' for #<ImageUploader::Uploader70095350840240:0x007f80afde1f48>):
+  app/uploaders/image_uploader.rb:53:in `block in add_text'
+  app/uploaders/image_uploader.rb:52:in `add_text'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:34:12 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oexBHFlHpxsSpmKKUyDFEJ6/9GKyEyJwt87Q5Er6qDV+dZMPM0eb2LJDTlH+k5gI3U6DVYgU/fPL1+0t6wYWQA==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b4539ee0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-63gdy7.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 1.0ms)
+
+NameError (undefined local variable or method `options' for #<ImageUploader::Uploader70095342329460:0x007f80aff5c2b0>):
+  app/uploaders/image_uploader.rb:53:in `block in add_text'
+  app/uploaders/image_uploader.rb:52:in `add_text'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (115.1ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:34:43 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oexBHFlHpxsSpmKKUyDFEJ6/9GKyEyJwt87Q5Er6qDV+dZMPM0eb2LJDTlH+k5gI3U6DVYgU/fPL1+0t6wYWQA==", "pet"=>{"name"=>"asdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b7093140 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-i4et17.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "asdf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:34:44.106689"], ["updated_at", "2016-11-01 05:34:44.106689"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/13
+Completed 302 Found in 318ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/pets/13" for ::1 at 2016-10-31 22:34:44 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/13" for ::1 at 2016-10-31 22:35:05 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered pets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:35:09 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (4.0ms)
+  Rendered pets/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:35:15 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ebe85+7sI5crVoei2cBGOiRwEKv01xqFsn/NyaDundamLm70hOwfVIuzq3l0cxsiZ4FnnM7QxQbOZvAAARIjow==", "pet"=>{"name"=>"adsfads", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b341d008 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1gr73a5.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adsfads"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:35:16.130938"], ["updated_at", "2016-11-01 05:35:16.130938"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/14
+Completed 302 Found in 331ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pets/14" for ::1 at 2016-10-31 22:35:16 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered pets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:37:18 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ebe85+7sI5crVoei2cBGOiRwEKv01xqFsn/NyaDundamLm70hOwfVIuzq3l0cxsiZ4FnnM7QxQbOZvAAARIjow==", "pet"=>{"name"=>"adsfads", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b52363c8 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1z073sr.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "adsfads"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:37:18.816902"], ["updated_at", "2016-11-01 05:37:18.816902"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/pets/15
+Completed 302 Found in 327ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pets/15" for ::1 at 2016-10-31 22:37:18 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pets/15" for ::1 at 2016-10-31 22:40:24 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"15"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `has_key?' for "Pet":String):
+  app/models/pet.rb:2:in `<class:Pet>'
+  app/models/pet.rb:1:in `<top (required)>'
+  app/controllers/pets_controller.rb:67:in `set_pet'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.2ms)
+
+
+Started GET "/pets/15" for ::1 at 2016-10-31 22:40:43 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered pets/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 17.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:40:46 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.1ms)
+  Rendered pets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:40:55 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOtuETdTiS0uVYNhMAbI0Lx4YC8d3dnuBiOQhxq6i69LcrwCXVO17o6wr7qdtZXI/4kXGCfaBm16Oq1Ou0Y12g==", "pet"=>{"name"=>"adfad", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80ae702de0 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-10sjlw5.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `name' for #<ImageUploader::Uploader70095323092460:0x007f80b5553510>):
+  app/uploaders/image_uploader.rb:51:in `block in add_text'
+  app/uploaders/image_uploader.rb:50:in `add_text'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (124.4ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:44:48 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOtuETdTiS0uVYNhMAbI0Lx4YC8d3dnuBiOQhxq6i69LcrwCXVO17o6wr7qdtZXI/4kXGCfaBm16Oq1Ou0Y12g==", "pet"=>{"name"=>"adfad", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b46a1788 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1pv3k0o.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.4ms)
+
+NameError (undefined local variable or method `pet_params' for #<ImageUploader::Uploader70095379617920:0x007f80b5581fa0>):
+  app/uploaders/image_uploader.rb:51:in `block in add_text'
+  app/uploaders/image_uploader.rb:50:in `add_text'
+  app/controllers/pets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (138.3ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:45:48 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOtuETdTiS0uVYNhMAbI0Lx4YC8d3dnuBiOQhxq6i69LcrwCXVO17o6wr7qdtZXI/4kXGCfaBm16Oq1Ou0Y12g==", "pet"=>{"name"=>"adfad", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80afb87400 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-fpmwy2.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adfad"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:45:49.151823"], ["updated_at", "2016-11-01 05:45:49.151823"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/16
+Completed 302 Found in 369ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/pets/16" for ::1 at 2016-10-31 22:45:49 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPet Load (0.3ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 16]]
+  Rendered pets/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pets/new" for ::1 at 2016-10-31 22:45:52 -0700
+Processing by PetsController#new as HTML
+  Rendered pets/_form.html.erb (2.5ms)
+  Rendered pets/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:45:57 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDHmuFTUeepekdM4QkgqMI6MJmF4BATHrpBXE+MCTB2zqDSrPtRFKf50/+Pv+3cozX1RVkID20TSiWraQv7yaA==", "pet"=>{"name"=>"adsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b5646008 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-16j4lhh.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adsf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:45:57.872554"], ["updated_at", "2016-11-01 05:45:57.872554"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/17
+Completed 302 Found in 336ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pets/17" for ::1 at 2016-10-31 22:45:57 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered pets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:46:20 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDHmuFTUeepekdM4QkgqMI6MJmF4BATHrpBXE+MCTB2zqDSrPtRFKf50/+Pv+3cozX1RVkID20TSiWraQv7yaA==", "pet"=>{"name"=>"adsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b46a8470 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1hlbyze.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adsf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:46:20.359670"], ["updated_at", "2016-11-01 05:46:20.359670"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/18
+Completed 302 Found in 313ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/pets/18" for ::1 at 2016-10-31 22:46:20 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered pets/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pets" for ::1 at 2016-10-31 22:46:41 -0700
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDHmuFTUeepekdM4QkgqMI6MJmF4BATHrpBXE+MCTB2zqDSrPtRFKf50/+Pv+3cozX1RVkID20TSiWraQv7yaA==", "pet"=>{"name"=>"adsf", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f80b6aa1318 @tempfile=#<Tempfile:/var/folders/dt/lz2jjvmd05v_jrx_2h2cs4j40000gn/T/RackMultipart20161031-22346-1fhxf1h.jpg>, @original_filename="Tesla-Model-3-with-mountain.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pet[image]\"; filename=\"Tesla-Model-3-with-mountain.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Pet"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pets" ("name", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "adsf"], ["image", "Tesla-Model-3-with-mountain.jpg"], ["created_at", "2016-11-01 05:46:41.888483"], ["updated_at", "2016-11-01 05:46:41.888483"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pets/19
+Completed 302 Found in 323ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/pets/19" for ::1 at 2016-10-31 22:46:41 -0700
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered pets/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
