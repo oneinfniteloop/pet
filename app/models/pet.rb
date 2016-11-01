@@ -4,14 +4,6 @@ class Pet < ActiveRecord::Base
 	validates_processing_of :image
   validate :image_size_validation
 
-  before_save :edit_image
-
-  def edit_image
-    puts self.name
-    puts self
-    # Manipulator.add_custom_text(image, self.name)
-  end
-
 
 private
   def image_size_validation
